@@ -1,0 +1,17 @@
+package main
+
+import (
+        "github.com/ZachtimusPrime/go-wunderground/wunderground"
+)
+
+func main() {
+
+		// Create new Wunderground client
+		client := wunderground.NewClient(nil, "SA", "Zerbst", {158b96fe72e74daa8b96fe72e7fdaa54})
+
+		// Get current weather data
+        weather, err := client.GetWeather()
+        if err != nil {
+            log.Print(err)
+        }
+}
